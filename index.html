@@ -2079,15 +2079,16 @@
 
           const belowName =
             document.getElementById('heroGuestBelowName');
-          if (below && belowName) {
+          if (below && belowName && name) {
 
             belowName.textContent = name;
 
             below.classList.remove('hidden');
 
-            document.getElementById('openInvitation').style.display = 'inline-block';
-
           }
+
+          // Tombol tetap muncul
+          document.getElementById('openInvitation').style.display = 'inline-block';
 
           // ---- ISI NAMA FORM RSVP ----
 
