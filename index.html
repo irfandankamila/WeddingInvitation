@@ -9,6 +9,10 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap"
     rel="stylesheet">
   <style>
+    #openInvitation {
+      display: none;
+    }
+
     :root {
       --cream: #faf7f2;
       --warm: #f0e8d8;
@@ -1577,7 +1581,7 @@
         <span class="hero-guest-below-name" id="heroGuestBelowName"></span>
       </div>
 
-      <button id="openInvitation">
+      <button id="openInvitation" style="display: none;">
         Buka Undangan
       </button>
 
@@ -2075,12 +2079,13 @@
 
           const belowName =
             document.getElementById('heroGuestBelowName');
-
           if (below && belowName) {
 
             belowName.textContent = name;
 
             below.classList.remove('hidden');
+
+            document.getElementById('openInvitation').style.display = 'inline-block';
 
           }
 
