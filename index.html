@@ -2019,7 +2019,9 @@
       const token =
         new URLSearchParams(window.location.search).get('t');
 
-      if (!token) return;
+      if (token) {
+        window.guestToken = token;
+      }
 
       // Simpan token secara global agar bisa digunakan RSVP
       window.guestToken = token;
